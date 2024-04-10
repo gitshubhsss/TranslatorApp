@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content:center ;
+    background-color: #5372F0;
+}
+.container{
+    width: 700px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+.wrapper{
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+.wrapper .text-input{
+    display: flex;
+    border-bottom: 1px solid #bbb;
+}
+.text-input textarea{
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+.text-input .to-text{
+    border-left: 1px solid #bbb;
+}
+.controls{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 10px;
+
+}
+.controls,li,.icons{
+    display: flex;
+    align-items: center;
+
+}
+.controls .icons i{
+    display: flex;
+    width: 3rem;
+    justify-content: center;
+    color:#bbb ;
+    font-size:1rem;
+    cursor: pointer;
+}
+.controls .icons i:hover{
+    font-size: 1.2rem;
+}
+.exchange i:hover{
+    font-size: 1.2rem;
+}
+.controls .row select{
+    outline: none;
+    border: none;
+    background: none;
+}
+.controls .exchange{
+    color: #9f9f9f;
+    cursor: pointer;
+}
+button{
+    margin-top: 1rem;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0466c8;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media (max-width:768px) {
+    .container{
+        width: 100%;
+    }
+    .controls .icons i{
+       width: 2rem;
+    }
+}
