@@ -50,9 +50,18 @@ formText.addEventListener("keyup", () => {
 
   let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
   //fethching the api responce
-  fetch(apiUrl).then((res) => {
-    res.json().then((data) => {
-      toText.value = data.responseData.translatedText;
+  if(formText.value!==""){
+    fetch(apiUrl).then((res) => {
+      res.json().then((data) => {
+        toText.value = data.responseData.translatedText;
+      });
     });
-  });
+  }
+  else{
+    fetch(apiUrl).then((res) => {
+      res.json().then((data) => {
+        toText.value = "type some text";
+      });
+    });
+  }
 });
